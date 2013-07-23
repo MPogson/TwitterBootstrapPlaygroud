@@ -1,0 +1,79 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+  
+    <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    
+    <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/bootstrap-responsive.min.css")" rel="stylesheet" type="text/css"/>
+    
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js" type="text/javascript"></script>  
+    <script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+    
+
+    @RenderSection("head", false)
+    
+    @RenderSection("css", required:false)
+
+</head>
+<body>
+           
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="nav" style="padding: 0px; vertical-align: central" href="@Url.Action("Index", "Home")">
+                    <!--img src="@Url.Content("~/Content/images/winged-sword.png")" width="120" height="48" alt="Parametric" /-->
+                </a> 
+                <a class="nav" style="padding: 0px; vertical-align: central" href="@Url.Action("Index", "Home")">
+                       <img src="@Url.Content("~/Content/images/sword.png")" height="44" width="44" /> 
+                </a>                
+                    
+                <div class="nav-collapse">
+
+                    <ul class="nav">
+                        <li id="nav-tab-security" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Drop Down <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Something</a></li>
+                                <li><a href="#">Really cool</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Bah humBug</a><br/></li>
+                                <li class="navbar-text">Company motto here!</li>
+                            </ul>
+                        </li>
+                        <li id="nav-tab-portfolio"><a href="#">Link</a></li>
+                        <li id="nav-tab-securityuniverse"><a href="#">Another one</a></li>
+                        <li id="nav-tab-restrictions"><a href="#">last link</a></li>
+                    </ul>
+                    <ul class="nav nav-collapse pull-right">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>  
+                        <li>@Html.ActionLink("Log In","Login","Account")</li>        
+                    </ul>
+                </div><!-- /.nav-collapse -->
+            </div>
+        </div><!-- /.navbar-inner -->
+    </div><!-- /.navbar --> 
+    
+    <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+   </div>              
+
+    @RenderSection("scripts", required:false)
+
+</body>
+</html>
