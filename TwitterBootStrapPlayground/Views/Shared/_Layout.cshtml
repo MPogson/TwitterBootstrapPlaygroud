@@ -98,12 +98,13 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="#">Project name</a>
+            <a class="brand" href="@Url.Action("Index", "Home")">Penchantelle</a>
             <div class="nav-collapse collapse">
               <ul class="nav">
                   <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
-                  <li><a href="#">Browse inventory</a></li>
-                  <li><a href="#">Create your own</a></li>
+                  <li><a href="@Url.Action("InventoryMain", "Inventory")">Browse inventory</a></li>
+                  <li><a href="@Url.Action("CustomOrderMain", "CustomOrder")">Create your own</a></li>
+                  <li><a href="@Url.Action("CustomerReviewMain", "CustomerReview")">Post a Review</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                   <ul class="dropdown-menu">
@@ -118,9 +119,11 @@
                 </li>
               </ul>
              <ul class="nav nav-collapse pull-right">
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>  
-                        <li>@Html.ActionLink("Log In","Login","Account")</li>        
+                 <li>@Html.ActionLink("About", "About", "Home")</li>
+                 <li>@Html.ActionLink("Contact", "Contact", "Home")</li>  
+                 <li>@Html.ActionLink("Log In","Login","Account")</li>
+                 <li>@Html.ActionLink("Shopping Cart"," "," ")</li>
+                         
              </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->

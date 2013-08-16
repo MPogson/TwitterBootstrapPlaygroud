@@ -182,7 +182,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerReviewController.cs" />
+    <Compile Include="Controllers\CustomOrderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InventoryController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -195,11 +198,14 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\images\barbarian.jpg" />
+    <Content Include="Content\images\banner.png" />
+    <Content Include="Content\images\Braclet.jpg" />
+    <Content Include="Content\images\dudeBraclet.jpg" />
+    <Content Include="Content\images\Facebook.png" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
-    <Content Include="Content\images\Sword.png" />
-    <Content Include="Content\images\winged-sword.png" />
+    <Content Include="Content\images\happy-hour-coming-soon.jpg" />
+    <Content Include="Content\images\logo.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -313,6 +319,9 @@
     <Content Include="Views\Shared\_LayoutOLD.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Inventory\InventoryMain.cshtml" />
+    <Content Include="Views\CustomOrder\CustomOrderMain.cshtml" />
+    <Content Include="Views\CustomerReview\CustomerReviewMain.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
