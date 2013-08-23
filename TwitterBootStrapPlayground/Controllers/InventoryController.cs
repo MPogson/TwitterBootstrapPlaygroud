@@ -21,12 +21,11 @@ namespace TwitterBootStrapPlayground.Controllers
 
         public ActionResult GetInventory()
         {
-            //var data = new List<Dictionary<string, object>>() {
-            //new Dictionary<string,object>(){ {"ProductName", "Rex"}, {"UnitPrice", "45.68"}},
-            //new Dictionary<string,object>(){ {"ProductName", "Smith"}, {"UnitPrice", "75.55"}}};
 
             var data = Builder<Braclet>
-                .CreateListOfSize(10)
+                .CreateListOfSize(100)
+                .All()
+                .Do(row => row.UnitPrice = 59.99m)
                 .Build();
 
             return Json(data, JsonRequestBehavior.AllowGet);

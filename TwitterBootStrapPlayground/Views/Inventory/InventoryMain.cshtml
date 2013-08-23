@@ -31,7 +31,8 @@
         <div class="product">
             <img src="../../Content/images/dudeBraclet.jpg" />
             <h3>${ProductName} Number in Stock: ${UnitsInStock}</h3>
-            <p>#:kendo.toString(25.99, "c")#</p>
+            @*<p>#:kendo.toString(${UnitPrice}, "c")#</p>*@
+            <p>$${UnitPrice} </p>
         </div>
     </script>
 
