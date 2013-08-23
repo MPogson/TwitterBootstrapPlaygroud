@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using FizzWare.NBuilder;
@@ -18,14 +19,17 @@ namespace TwitterBootStrapPlayground.Controllers
             return View();
         }
 
-        public JsonResult GetInventory()
+        public ActionResult GetInventory()
         {
-            var braclets = Builder<Braclet>
-                .CreateListOfSize(50)
+            //var data = new List<Dictionary<string, object>>() {
+            //new Dictionary<string,object>(){ {"ProductName", "Rex"}, {"UnitPrice", "45.68"}},
+            //new Dictionary<string,object>(){ {"ProductName", "Smith"}, {"UnitPrice", "75.55"}}};
+
+            var data = Builder<Braclet>
+                .CreateListOfSize(10)
                 .Build();
 
-            var jsonResult = Json(new Braclet {Discontinued = false, ProductID = 100, ProductName = "Testing", UnitPrice = 100, UnitsInStock = 200}, JsonRequestBehavior.AllowGet);
-            return jsonResult;
+            return Json(data, JsonRequestBehavior.AllowGet);
         }
 
     }
